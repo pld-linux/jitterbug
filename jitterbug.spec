@@ -35,9 +35,6 @@ install -d $RPM_BUILD_ROOT/home/httpd/cgi-bin \
 install source/%{name}		$RPM_BUILD_ROOT/home/httpd/cgi-bin/%{name}
 install source/new_message	$RPM_BUILD_ROOT%{_bindir}
 
-strip $RPM_BUILD_ROOT/home/httpd/cgi-bin/%{name}
-strip $RPM_BUILD_ROOT%{_bindir}/*
-
 gzip -9nf docs/* mail/* config/*
 
 %clean
