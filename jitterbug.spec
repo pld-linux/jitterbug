@@ -28,11 +28,11 @@ cd source
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/home/httpd/cgi-bin \
+install -d $RPM_BUILD_ROOT/home/services/httpd/cgi-bin \
 	$RPM_BUILD_ROOT%{_sysconfdir}/%{name} \
 	$RPM_BUILD_ROOT%{_bindir}
 
-install source/%{name}		$RPM_BUILD_ROOT/home/httpd/cgi-bin/%{name}
+install source/%{name}		$RPM_BUILD_ROOT/home/services/httpd/cgi-bin/%{name}
 install source/new_message	$RPM_BUILD_ROOT%{_bindir}
 
 %clean
@@ -41,6 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc docs/* mail/* config
-%attr(4750,root,http) /home/httpd/cgi-bin/%{name}
+%attr(4750,root,http) /home/services/httpd/cgi-bin/%{name}
 %attr(755, root,root) %{_bindir}/*
 %attr(755, root,root) %dir %{_sysconfdir}/%{name}
