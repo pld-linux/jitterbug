@@ -8,7 +8,7 @@ Group(pl):	Programowanie/Narzêdzia
 Copyright:	GPL
 Source0:	ftp://ftp.samba.org/pub/jitterbug/%{name}-%{version}.tar.gz
 URL:		http://samba.anu.edu.au/jitterbug/
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 JitterBug is a cgi-bin tool for problem reporting and tracking developed
