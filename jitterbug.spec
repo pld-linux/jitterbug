@@ -4,19 +4,21 @@ Name:		jitterbug
 Version:	1.6.2
 Release:	1
 Group:		Development/Tools
+Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
-Copyright:	GPL
+License:	GPL
 Source0:	ftp://ftp.samba.org/pub/jitterbug/%{name}-%{version}.tar.gz
 URL:		http://samba.anu.edu.au/jitterbug/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-JitterBug is a cgi-bin tool for problem reporting and tracking developed
-by Andrew Tridgell for the Samba Team.
+JitterBug is a cgi-bin tool for problem reporting and tracking
+developed by Andrew Tridgell for the Samba Team.
 
 %description -l pl
-JitterBug jest skryptem cgi-bin s³u¿±cym do reportowania i ¶ledzenia b³êdów.
-JitterBug zosta³ stworzony przez Andrew Tridgell dla Zespo³u Samby.
+JitterBug jest skryptem cgi-bin s³u¿±cym do reportowania i ¶ledzenia
+b³êdów. JitterBug zosta³ stworzony przez Andrew Tridgell dla Zespo³u
+Samby.
 
 %prep
 %setup -q
@@ -26,15 +28,16 @@ cd source && %configure && make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT/home/httpd/cgi-bin
-install -d $RPM_BUILD_ROOT/etc/%{name}
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT/home/httpd/cgi-bin \
+	$RPM_BUILD_ROOT%{_sysconfdir}/%{name} \
+	$RPM_BUILD_ROOT%{_bindir}
 
 install source/%{name}		$RPM_BUILD_ROOT/home/httpd/cgi-bin/%{name}
 install source/new_message	$RPM_BUILD_ROOT%{_bindir}
-strip				$RPM_BUILD_ROOT/home/httpd/cgi-bin/%{name}
-strip				$RPM_BUILD_ROOT%{_bindir}/*
+
+strip $RPM_BUILD_ROOT/home/httpd/cgi-bin/%{name}
+strip $RPM_BUILD_ROOT%{_bindir}/*
+
 gzip -9nf docs/* mail/* config/*
 
 %clean
@@ -45,4 +48,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/* mail/* config
 %attr(4750,root,http) /home/httpd/cgi-bin/%{name}
 %attr(755, root,root) %{_bindir}/*
-%attr(755, root,root) %dir /etc/%{name}
+%attr(755, root,root) %dir %{_sysconfdir}/%{name}
