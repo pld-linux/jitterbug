@@ -1,12 +1,13 @@
-Summary:	tool for problem reporting and tracking developed
-Summary(pl):	narzêdzie do raportowania i ¶ledzenia rozwoju
+Summary:	Tool for problem reporting and tracking developed
+Summary(pl):	Narzêdzie do raportowania i ¶ledzenia rozwoju
 Name:		jitterbug
 Version:	1.6.2
 Release:	1
+License:	GPL
 Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
-License:	GPL
 Source0:	ftp://ftp.samba.org/pub/jitterbug/%{name}-%{version}.tar.gz
 URL:		http://samba.anu.edu.au/jitterbug/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +25,9 @@ Samby.
 %setup -q
 
 %build
-cd source && %configure && make
+cd source
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
