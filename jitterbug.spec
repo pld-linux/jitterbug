@@ -5,9 +5,6 @@ Version:	1.6.2
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://ftp.samba.org/pub/jitterbug/%{name}-%{version}.tar.gz
 URL:		http://samba.anu.edu.au/jitterbug/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
