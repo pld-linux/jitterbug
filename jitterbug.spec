@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.samba.org/pub/jitterbug/%{name}-%{version}.tar.gz
+# Source0-md5:	a01f5807ff53c2ebcf1915fa9c472236
 URL:		http://samba.anu.edu.au/jitterbug/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
