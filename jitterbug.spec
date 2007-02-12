@@ -1,5 +1,5 @@
 Summary:	Tool for problem reporting and tracking developed
-Summary(pl):	Narzêdzie do raportowania i ¶ledzenia rozwoju
+Summary(pl.UTF-8):   NarzÄ™dzie do raportowania i Å›ledzenia rozwoju
 Name:		jitterbug
 Version:	1.6.2
 Release:	1
@@ -14,9 +14,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 JitterBug is a cgi-bin tool for problem reporting and tracking
 developed by Andrew Tridgell for the Samba Team.
 
-%description -l pl
-JitterBug jest skryptem cgi-bin s³u¿±cym do reportowania i ¶ledzenia
-b³êdów. JitterBug zosta³ stworzony przez Andrew Tridgell dla Zespo³u
+%description -l pl.UTF-8
+JitterBug jest skryptem cgi-bin sÅ‚uÅ¼Ä…cym do reportowania i Å›ledzenia
+bÅ‚Ä™dÃ³w. JitterBug zostaÅ‚ stworzony przez Andrew Tridgell dla ZespoÅ‚u
 Samby.
 
 %prep
