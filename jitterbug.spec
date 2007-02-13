@@ -1,5 +1,5 @@
 Summary:	Tool for problem reporting and tracking developed
-Summary(pl.UTF-8):   Narzędzie do raportowania i śledzenia rozwoju
+Summary(pl.UTF-8):	Narzędzie do raportowania i śledzenia rozwoju
 Name:		jitterbug
 Version:	1.6.2
 Release:	1
